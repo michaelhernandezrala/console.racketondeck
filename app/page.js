@@ -1,18 +1,13 @@
 "use client";
 
-import { ArrowForward } from "@mui/icons-material";
-import { Button, IconButton } from "@mui/material";
+import { Button, CssBaseline, TextField } from "@mui/material";
 
 export default function Home() {
   return (
     <main>
-      <Button startIcon={<ArrowForward />} disableElevation variant="contained">
-        My boton
-      </Button>
-
-      <IconButton color="secondary">
-        <ArrowForward />
-      </IconButton>
+      <CssBaseline />
+      <TextField label="Nombre de la academia" placeholder="Super Academy" variant="filled" />
+      <Button>Enviar</Button>
     </main>
   );
 }
