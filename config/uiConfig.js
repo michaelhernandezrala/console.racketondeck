@@ -1,5 +1,7 @@
 const uiConfig = {
-  drawerWidth: 240,
+  surface: {
+    drawerWidth: 240,
+  },
 };
 
 export default uiConfig;

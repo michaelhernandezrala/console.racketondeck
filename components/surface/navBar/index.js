@@ -17,8 +17,8 @@ const NavBarWrapper = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'op
     {
       props: ({ open }) => open,
       style: {
-        width: `calc(100% - ${uiConfig.drawerWidth}px)`,
-        marginLeft: `${uiConfig.drawerWidth}px`,
+        width: `calc(100% - ${uiConfig.surface.drawerWidth}px)`,
+        marginLeft: `${uiConfig.surface.drawerWidth}px`,
         transition: theme.transitions.create(['margin', 'width'], {
           easing: theme.transitions.easing.easeOut,
           duration: theme.transitions.duration.enteringScreen,
