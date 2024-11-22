@@ -12,12 +12,13 @@ const headCells = [
   { id: 'image', numeric: false, disablePadding: true },
   { id: 'name', numeric: false, disablePadding: true, label: 'Nombre' },
   { id: 'email', numeric: false, disablePadding: true, label: 'Email' },
-  { id: 'rol', numeric: false, disablePadding: true, label: 'Puesto' },
-  { id: 'sports', numeric: true, disablePadding: true, label: 'Deportes' },
-  { id: 'createdAt', numeric: true, disablePadding: true, label: 'Contratación' },
+  { id: 'sport', numeric: true, disablePadding: true, label: 'Deporte' },
+  { id: 'level', numeric: false, disablePadding: true, label: 'Nivel' },
+  { id: 'instructor', numeric: false, disablePadding: true, label: 'Instructor' },
+  { id: 'createdAt', numeric: true, disablePadding: true, label: 'Alumno desde' },
 ];
 
-export default function Staff() {
+export default function Players() {
   const [rows, setRows] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(0);
@@ -31,7 +32,7 @@ export default function Staff() {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <TableToolbar total={rows.length} numSelected={numSelected} />
         <Button variant="contained" color="primary" startIcon={<Add />} sx={{ height: 'fit-content' }}>
-          Miembro
+          Alumno/a
         </Button>
       </Box>
       <Table headCells={headCells} rows={rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)} />
