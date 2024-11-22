@@ -1,7 +1,7 @@
 import uiConfig from '@/config/uiConfig';
 import { Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from '@mui/material';
-
 import { Fragment } from 'react';
+
 import menuDrawer from './menuDrawer';
 
 export default function SideDrawer({ open }) {
