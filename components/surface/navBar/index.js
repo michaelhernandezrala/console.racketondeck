@@ -1,7 +1,6 @@
 'use client';
 import { AppBar, Box, Toolbar } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useState } from 'react';
 
 import SideDrawer from '@/components/navigation/sideDrawer';
 import DrawerToggleButton from '@/components/navigation/sideDrawer/drawerToogleButton';
@@ -28,11 +27,7 @@ const NavBarWrapper = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'op
   ],
 }));
 
-export default function NavBar() {
-  const [open, setOpen] = useState(true);
-
-  const toggleDrawer = () => setOpen((prevOpen) => !prevOpen);
-
+export default function NavBar({ open, toggleDrawer }) {
   return (
     <Box sx={{ display: 'flex' }}>
       <NavBarWrapper color="transparent" position="fixed" open={open}>
