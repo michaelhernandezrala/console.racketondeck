@@ -1,6 +1,6 @@
 import NavBar from '@/components/surface/navBar';
 import uiConfig from '@/config/uiConfig';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 
@@ -8,7 +8,6 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme }) => ({
   flexGrow: 1,
-  padding: theme.spacing(3),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -38,7 +37,9 @@ export default function MainWrapper({ children }) {
       <NavBar open={open} toggleDrawer={toggleDrawer} />
       <Main open={open}>
         <Offset />
-        {children}
+        <Container maxWidth="lg" sx={{ padding: 10 }}>
+          {children}
+        </Container>
       </Main>
     </Box>
   );
